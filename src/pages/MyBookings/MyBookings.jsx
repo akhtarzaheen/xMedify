@@ -45,7 +45,7 @@ const MyBookings = () => {
                 <div className="booking-details">
                   <div className="detail-item">
                     <MapPin size={18} />
-                    <span>{booking.centerAddress}</span>
+                    <h3>{booking.centerAddress ? booking.centerAddress : booking?.["Hospital Name"]}</h3>
                   </div>
                   <div className="detail-item">
                     <Clock size={18} />

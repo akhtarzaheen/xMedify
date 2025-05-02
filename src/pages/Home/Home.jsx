@@ -407,49 +407,42 @@ const Home = () => {
                 <div className="search-container">
                   <div className="search-group" id="state">
                     <label>State</label>
-                    <button 
-                      type="button"
+                    <div 
                       className="dropdown-button"
                       onClick={() => setStateDropdownOpen(!stateDropdownOpen)}
                     >
                       {selectedState || 'Select State'}
-                    </button>
-                    {stateDropdownOpen && (
-                      <ul className="dropdown-list">
-                        {states.map((state, index) => (
-                          <li
-                            key={index}
-                            onClick={() => handleStateSelect(state)}
-                          >
-                            {state}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                    </div>
+                    <ul className="dropdown-list" style={{ display: stateDropdownOpen ? 'block' : 'none' }}>
+                      {states.map((state, index) => (
+                        <li
+                          key={index}
+                          onClick={() => handleStateSelect(state)}
+                        >
+                          {state}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   
                   <div className="search-group" id="city">
                     <label>City</label>
-                    <button 
-                      type="button"
+                    <div 
                       className="dropdown-button"
                       onClick={() => selectedState && setCityDropdownOpen(!cityDropdownOpen)}
-                      disabled={!selectedState || loading}
                     >
                       {selectedCity || 'Select City'}
-                    </button>
-                    {cityDropdownOpen && (
-                      <ul className="dropdown-list">
-                        {cities.map((city, index) => (
-                          <li
-                            key={index}
-                            onClick={() => handleCitySelect(city)}
-                          >
-                            {city}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                    </div>
+                    <ul className="dropdown-list" style={{ display: cityDropdownOpen ? 'block' : 'none' }}>
+                      {cities.map((city, index) => (
+                        <li
+                          key={index}
+                          onClick={() => handleCitySelect(city)}
+                        >
+                          {city}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   
                   <button 
@@ -656,4 +649,6 @@ const Home = () => {
 };
 
 export default Home;
+
+
 

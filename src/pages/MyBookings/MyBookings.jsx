@@ -17,7 +17,7 @@ const MyBookings = () => {
   const handleBackClick = () => {
     navigate('/');
   };
-
+  console.log('booking=>', bookings);
   return (
     <div className="my-bookings-page">
       <div className="container">

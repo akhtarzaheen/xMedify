@@ -11,7 +11,7 @@ export const AppProvider = ({ children }) => {
   const [selectedState, setSelectedState] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
   const [medicalCenters, setMedicalCenters] = useState([]);
-  const [bookings, setBookings] = useState([]);
+  const [bookings, setBookings] = useState(localStorage.getItem('bookings') ? JSON.parse(localStorage.getItem('bookings')) :[]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 

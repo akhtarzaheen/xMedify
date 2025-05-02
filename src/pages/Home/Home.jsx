@@ -87,7 +87,7 @@ const Home = () => {
                       <option value="">Select State</option>
                       {states.map((state, index) => (
                         <option key={index} value={state}>
-                          {state}
+                          <li>{state}</li>
                         </option>
                       ))}
                     </select>
@@ -105,7 +105,7 @@ const Home = () => {
                       <option value="">Select City</option>
                       {cities.map((city, index) => (
                         <option key={index} value={city}>
-                          {city}
+                          <li>{city}</li>
                         </option>
                       ))}
                     </select>
@@ -118,7 +118,7 @@ const Home = () => {
                     disabled={!selectedState || !selectedCity || loading}
                   >
                     <Search size={18} />
-                    <span>Search</span>
+                  Search
                   </button>
                 </div>
               </form>

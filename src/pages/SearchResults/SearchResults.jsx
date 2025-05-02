@@ -60,7 +60,7 @@ const SearchResults = () => {
     <div className="search-results-page">
       <div className="container">
         <div className="results-header">
-          <h1>{medicalCenters.length} medical centers available in {selectedCity}</h1>
+          <h1>{medicalCenters.length} medical centers available in {selectedCity?.toLowerCase()}</h1>
           <p>Showing results for {selectedCity}, {selectedState}</p>
         </div>
         
